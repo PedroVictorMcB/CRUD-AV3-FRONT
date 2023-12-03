@@ -2,12 +2,12 @@
 
 
 
-const productList = document.querySelector('products');
-const addProductForm = document.querySelector('add-product-form');
-const updateProductForm = document.querySelector('update-product-form');
-const updateProductId = document.querySelector('update-id');
-const updateProductName = document.querySelector('update-name');
-const updateProductPrice = document.querySelector('update-price');
+const productList = document.querySelector('#products');
+const addProductForm = document.querySelector('#add-product-form');
+const updateProductForm = document.querySelector('#update-product-form');
+const updateProductId = document.querySelector('#update-id');
+const updateProductName = document.querySelector('#update-name');
+const updateProductPrice = document.querySelector('#update-price');
 
 
 // Function to fetch all products from the server
@@ -72,7 +72,7 @@ addProductForm.addEventListener('submit', async event => {
 
 // Function to add a new product
 async function addProduct(name, price) {
-  const response = await fetch('18.223.28.45:3000/products', {  //tirar porta caso der erro
+  const response = await fetch('18.223.28.45/products', {  //tirar porta caso der erro
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -85,7 +85,7 @@ async function addProduct(name, price) {
 
 // Function to delete a new product
 async function deleteProduct(id) {
-  const response = await fetch('18.223.28.45:3000/products/' + id, {
+  const response = await fetch('18.223.28.45/products/' + id, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json'
@@ -99,7 +99,7 @@ async function deleteProduct(id) {
 // Function Update
 async function updateProduct(id, data) {
   try{
-  const response = await fetch("18.223.28.45:3000/products/"+id, {
+  const response = await fetch("18.223.28.45/products/"+id, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json'
