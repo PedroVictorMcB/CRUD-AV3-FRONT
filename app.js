@@ -2,12 +2,12 @@
 
 
 
-const productList = document.querySelector('#products');
-const addProductForm = document.querySelector('#add-product-form');
-const updateProductForm = document.querySelector('#update-product-form');
-const updateProductId = document.querySelector('#update-id');
-const updateProductName = document.querySelector('#update-name');
-const updateProductPrice = document.querySelector('#update-price');
+const productList = document.querySelector('products');
+const addProductForm = document.querySelector('add-product-form');
+const updateProductForm = document.querySelector('update-product-form');
+const updateProductId = document.querySelector('update-id');
+const updateProductName = document.querySelector('update-name');
+const updateProductPrice = document.querySelector('update-price');
 
 
 // Function to fetch all products from the server
